@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import PortfolioList from '../portfolioList/PortfolioList';
 import './portfolio.scss';
+import {webPortfolio, fotografiaPortfolio, socialmediaPortfolio, designPortfolio, videosPortfolio} from "../../data"
 
 const Portfolio = () => {
     
     const [selected, setSelected] = useState("featured")
+    const [data, setData] = useState([])
 
     const list = [
         {
-            id: "aplicativosweb",
+            id: "web",
             title: "Aplicativos Web"
 
         },
@@ -31,6 +33,30 @@ const Portfolio = () => {
         }
     ]
 
+    useEffect(()=>{
+
+        switch(selected){
+            case "fotografia":
+                setData(fotografiaPortfolio);
+                break;
+            case "web":
+                setData(webPortfolio);
+                break;
+            case "design":
+                    setData(designPortfolio);
+                break;
+            case "videos":
+                        setData(videosPortfolio);
+                break;
+            case "socialmedia":
+                setData(socialmediaPortfolio);
+                break;
+                default:
+                    setData(socialmediaPortfolio);
+        }
+
+    },[selected])
+
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portifólio</h1>
@@ -40,34 +66,13 @@ const Portfolio = () => {
                 ))}
             </ul>
             <div className="container">
+                {data.map(d=>(
                 <div className="item">
                     <div className="img">
-                        <img src="https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg" alt="" />
-                        <h3>Banking app</h3>
+                        <img src={d.img} alt="" />
+                        <h3>{d.title}</h3>
                     </div>
-                </div>
-            
-            
-                <div className="item">
-                    <div className="img">
-                        <img src="https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg" alt="" />
-                        <h3>Banking app</h3>
-                    </div>
-                </div>
-            
-                <div className="item">
-                    <div className="img">
-                        <img src="https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg" alt="" />
-                        <h3>Banking app</h3>
-                    </div>
-                </div>
-            
-                <div className="item">
-                    <div className="img">
-                        <img src="https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg" alt="" />
-                        <h3>Banking app</h3>
-                    </div>
-                </div>
+                </div>))}
             </div>
         </div>
     );
