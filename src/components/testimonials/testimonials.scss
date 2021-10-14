@@ -10,7 +10,7 @@
   }
   .container {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,13 +24,44 @@
       flex-direction: column;
       justify-content: space-around;
       padding: 20px;
+
       .top {
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
           &.left {
+            height: 15px;
+            transform: rotateZ(270deg);
           }
+          &.right {
+            height: 25px;
+          }
+          &.user {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 30px;
+          }
+        }
+      }
+      .center {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(218, 218, 245);
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h3 {
+          margin-bottom: 5px;
+        }
+        h4 {
+          color: grey;
         }
       }
     }
