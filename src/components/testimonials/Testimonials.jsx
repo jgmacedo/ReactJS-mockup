@@ -17,6 +17,7 @@ const Testimonials = () => {
       img: "assets/felipe.png",
       icon: "assets/linkedin.png",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      featured: true,
     },
     {
       id: 2,
@@ -32,7 +33,7 @@ const Testimonials = () => {
       <h1>Depoimentos</h1>
       <div className="container">
         {data.map((d) => (
-          <div className="card">
+          <div className={d.featured ? "card featured" : "card"}>
             <div className="top">
               <img src="assets/down.png" className="left" alt="" />
               <img className="user" src={d.img} alt="" />
