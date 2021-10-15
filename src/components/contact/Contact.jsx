@@ -17,7 +17,7 @@ const Contact = () => {
 
       <div className="right">
         <h2>Contato.</h2>
-        <form onSubmit={handleSubmit}>
+        <form netlify name="contato" onSubmit={handleSubmit}>
           <input type="text" placeholder="Email" />
           <textarea placeholder="Mensagem"></textarea>
           <button type="submit">Enviar</button>
