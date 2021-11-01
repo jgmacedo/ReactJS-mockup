@@ -8,18 +8,18 @@ export default function Works() {
     {
       id: "0",
       icon: "./assets/writing.png",
-      title: "bengas",
+      title: "Lorem Ipsum",
       desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit edamame",
       img: "https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg",
-      type: "picici",
+      type: "Textos",
     },
     {
       id: "1",
       icon: "./assets/globe.png",
-      title: "Global",
+      title: "Dolor Sit",
       desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit edamame",
       img: "https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg",
-      type: "picas",
+      type: "Global",
     },
     {
       id: "2",
@@ -32,10 +32,10 @@ export default function Works() {
     {
       id: "3",
       icon: "./assets/linkedin.png",
-      title: "LinkedIn",
+      title: "Consectetur Adipiscing",
       desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit edamame",
       img: "https://i.ytimg.com/vi/HghA2Kh-TBc/maxresdefault.jpg",
-      type: "blimblom",
+      type: "Linkedin",
     },
   ];
 
